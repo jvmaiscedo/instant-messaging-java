@@ -1,0 +1,66 @@
+.scroll-pane-grupo .scroll-bar:vertical {
+    -fx-pref-width: 8px;
+}
+
+.scroll-pane-conversa .scroll-bar:vertical {
+    -fx-pref-width: 8px;
+}
+
+.button {
+    -fx-cursor: hand;
+    -fx-background-radius: 50;
+    -fx-background-color: white;
+}
+
+.button:hover {
+    -fx-background-color: #68e7d6;
+}
+
+.label-aviso {
+    -fx-text-fill: red;
+    -fx-font-size: 12px;
+}
+
+.text-field-inicial {
+    -fx-alignment: center;
+    -fx-background-color: #68e7d6;
+    -fx-text-alignment: center;
+    -fx-background-radius: 15;
+}
+
+.text-area-conversa {
+    -fx-background-color: #b2f1e7;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+}
+
+
+.scroll-pane-grupo .viewport {
+    -fx-background-color: #737373;
+}
+
+.scroll-pane-grupo .increment-button,
+.scroll-pane .decrement-button {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.scroll-pane-conversa .viewport {
+    -fx-background-color: #98ece2;
+}
+
+.scroll-pane-conversa .track {
+    -fx-background-color: #0796f1;
+}
+.scroll-pane-conversa .thumb {
+    -fx-background-color: #737373;
+    -fx-background-radius: 4px;
+}
+.scroll-pane-grupo .track {
+    -fx-background-color: #0796f1;
+}
+
+.scroll-pane-grupo .thumb {
+    -fx-background-color: #0500fd;
+    -fx-background-radius: 4px;
+}

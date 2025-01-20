@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerTelaPrincipal">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="720.0" pickOnBounds="true">
+            <image>
+                <Image url="@../img/telaPrincipal.png" />
+            </image>
+        </ImageView>
+        <ScrollPane fx:id="grupos" hbarPolicy="NEVER" layoutY="50.0" prefHeight="550.0" prefWidth="316.0" style="-fx-background-color: grey;" styleClass="scroll-pane-grupo" stylesheets="@styles.css">
+            <content>
+                <VBox fx:id="listaGrupos" prefHeight="500.0" prefWidth="320.0" />
+            </content>
+        </ScrollPane>
+        <AnchorPane fx:id="conversaEAddGrupo" layoutX="320.0" prefHeight="600.0" prefWidth="400.0" />
+        <Button layoutX="270.0" layoutY="5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#entrarNoGrupo" prefHeight="39.0" prefWidth="39.0" stylesheets="@styles.css">
+            <font>
+                <Font size="1.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="42.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/adicionar.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+</AnchorPane>
