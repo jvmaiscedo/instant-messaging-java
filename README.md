@@ -16,7 +16,7 @@ No desenvolvimento do projeto acabei me deparando com um bug relacionado a padro
 
 Desse modo, quando tentei realizar a comunicação entre duas máquinas com SO diferentes, por exemplo, Linux e Windows, a criação do grupo era realizada corretamente - via TCP - mas as mensagens não conseguiam obter o mesmo êxito pois ao extrair os bytes em Linux obtia-os no padrão UTF-8, já no windows eram obtidos no padrão ANSI, de modo que o servidor, ao decodificar a APDU, não conseguia encaminhar a mensagem ao grupo correto, gerando um erro de comunicação. Apesar de simples solução - padronização dos bytes das mensagens - foi muito legal perceber que em todos os estágios da comunicação via rede os padrões de comunicação, protocolos, devem ser mantidos para garantir a comunicação eficaz e confiável.
 ### Demonstração do funcionamento
-![Demonstração da execução da aplicação](Cliente/img/demo.gif)
+![Demonstração da execução da aplicação](Cliente/img/demo.mp4)
 
 ### Como utilizar a aplicação
 
