@@ -19,6 +19,9 @@ Desse modo, quando tentei realizar a comunicação entre duas máquinas com SO d
 ![Demonstração da execução da aplicação](Cliente/img/demo.gif)
 
 ### Como utilizar a aplicação
+
+Clone o repositório: `git clone: https://github.com/jvmaiscedo/instant-messaging-java.git`
+
 É necessário possuir o Java, na versão 8, instalada.
 
 Uma vez cumprido o pré-requisito, siga os seguintes passos para executar o servidor.
