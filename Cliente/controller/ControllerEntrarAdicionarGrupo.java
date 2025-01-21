@@ -39,24 +39,26 @@ public class ControllerEntrarAdicionarGrupo implements Initializable {
     nomeGrupo.textProperty().addListener(createTextChangeListener(aviso));
   }
 
-  /* ***************************************************************
+  /*
+   * ***************************************************************
    * Metodo: confirmarGrupo
    * Funcao: confirma o grupo e realiza a chamada do TCP.
    * Parametros:
-   *            ActionEvent - event
-   * Retorno:  Sem retorno
-   *************************************************************** */
+   * ActionEvent - event
+   * Retorno: Sem retorno
+   */
   @FXML
   private void confirmarGrupo(ActionEvent event) {
     if (nomeGrupo.getText().isEmpty()) {
       aviso.setText("O campo está vazio!");
     } else {
-      ControllerTelaInicial.cliente.getClienteTCP().entrarNoGrupo(nomeGrupo.getText());//solicita a entrada no grupo via TCP
-      ControllerTelaInicial.grupos.putIfAbsent(nomeGrupo.getText(), new ArrayList<Mensagem>());
-      ControllerConversa.nomeDoGrupo = nomeGrupo.getText();//seta o nome do grupo na tela de conversa
-      ControllerTelaPrincipal.getInstance().atualizarListaDeGrupos();//atualiza a lista de grupos
+      ControllerTelaInicial.cliente.getClienteTCP().entrarNoGrupo(nomeGrupo.getText().trim());// solicita a entrada no
+                                                                                              // grupo via TCP
+      ControllerTelaInicial.grupos.putIfAbsent(nomeGrupo.getText().trim(), new ArrayList<Mensagem>());
+      ControllerConversa.nomeDoGrupo = nomeGrupo.getText().trim();// seta o nome do grupo na tela de conversa
+      ControllerTelaPrincipal.getInstance().atualizarListaDeGrupos();// atualiza a lista de grupos
       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/conversa.fxml"));
-      try {//carrega a tela de conversa do grupo
+      try {// carrega a tela de conversa do grupo
         Parent mainScreen = fxmlLoader.load();
         ControllerTelaPrincipal.conversaEAddGrupoStatic.getChildren().clear();
         ControllerTelaPrincipal.conversaEAddGrupoStatic.getChildren().addAll(mainScreen);
@@ -66,14 +68,15 @@ public class ControllerEntrarAdicionarGrupo implements Initializable {
     }
   }
 
-  /* ***************************************************************
+  /*
+   * ***************************************************************
    * Metodo: createTextChangeListener
    * Funcao: Adiciona um ouvinte de mudancas na caixa de texto
    * Parametros:
-   *            Label - aviso
+   * Label - aviso
    * Retorno:
-   *           ChangeListener<String>
-   *************************************************************** */
+   * ChangeListener<String>
+   */
   private ChangeListener<String> createTextChangeListener(Label aviso) {
     return (observable, oldValue, newValue) -> {
       if (newValue.isEmpty()) {
@@ -85,6 +88,5 @@ public class ControllerEntrarAdicionarGrupo implements Initializable {
       }
     };
   }
-
 
 }
